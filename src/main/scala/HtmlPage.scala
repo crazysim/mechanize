@@ -40,7 +40,7 @@ trait HtmlBase {
         }
     }.asInstanceOf[DomNode]
 
-    implicit def htmlelement2domnode(x:HtmlUnitElement) = new {
+    implicit def htmlelement2domnode(x:HtmlUnitElement):DomNode = new {
         def asXml() = x.asXml
         def dom() = x
         def getElementById2(id:String):HtmlUnitElement = {
