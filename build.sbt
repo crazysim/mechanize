@@ -4,7 +4,7 @@ version := "0.3"
 
 organization := "cn.orz.pascal"
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.9.2"
 
 publishTo := Some(Resolver.file("local-github-repos", file("../maven-repos")))
 
