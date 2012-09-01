@@ -32,23 +32,23 @@ trait HtmlBase {
     }
     def source:DomNode
 
-    implicit def htmlpage2domnode(x:HtmlUnitPage) = new DomNode {
+    implicit def htmlpage2domnode(x:HtmlUnitPage):DomNode = new {
         def asXml() = x.asXml()
         def dom() = x
         def getElementById2(id:String):{ def asXml():String } = {
            x.getElementById(id).asInstanceOf[HtmlUnitElement]
-        } 
-    }
+        }
+    }.asInstanceOf[DomNode]
 
-    implicit def htmlelement2domnode(x:HtmlUnitElement) = new DomNode {
+    implicit def htmlelement2domnode(x:HtmlUnitElement) = new {
         def asXml() = x.asXml
         def dom() = x
         def getElementById2(id:String):HtmlUnitElement = {
            x.getElementById[HtmlUnitElement](id)
         }
-    } 
+    }.asInstanceOf[DomNode]
 
-    def asXml:Elem = { toNode(source.asXml) }
+  def asXml:Elem = { toNode(source.asXml) }
 
     def get(attr:FieldAttribute):Elem = {
         val element = (attr match {
