@@ -6,6 +6,8 @@ organization := "cn.orz.pascal"
 
 scalaVersion := "2.9.2"
 
+scalacOptions += "-deprecation"
+
 publishTo := Some(Resolver.file("local-github-repos", file("../maven-repos")))
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "1.6.1" % "test"
