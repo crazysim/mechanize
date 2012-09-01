@@ -14,6 +14,6 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "1.6.1" % "test"
 
 libraryDependencies += "net.sourceforge.htmlunit" % "htmlunit" % "2.10"
 
-libraryDependencies += "nu.validator.htmlparser" % "htmlparser" % "1.2.1"
+libraryDependencies += "nu.validator.htmlparser" % "htmlparser" % "1.4"
 
 
