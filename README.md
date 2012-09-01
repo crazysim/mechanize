@@ -12,7 +12,7 @@ Thanks to  [Mechanize(ruby)](https://github.com/tenderlove/mechanize) and [HtmlU
     libraryDependencies += "cn.orz.pascal" %% "mechanize" % "0.2"
 
 ## Example
-    import cn.orz.pascal.scala.mechanize._
+    import cn.orz.pascal.mechanize._
     val agent = new Mechanize()
     val page  = agent.get("http://www.google.co.jp")
     val form  = page.forms(0)
@@ -26,8 +26,8 @@ Thanks to  [Mechanize(ruby)](https://github.com/tenderlove/mechanize) and [HtmlU
 
 
 ## License 
-    Copyright (c) 2002-2011 Gargoyle Software Inc.
-    
+    Copyright (c) 2002-2011 Gargoyle Software Inc.    
+
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
