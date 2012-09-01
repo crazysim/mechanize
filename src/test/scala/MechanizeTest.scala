@@ -1,4 +1,4 @@
-package cn.orz.pascal.scala.mechanize 
+package cn.orz.pascal.mechanize 
 
 
 // vim: set ts=4 sw=4 et:
