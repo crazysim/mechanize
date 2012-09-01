@@ -6,7 +6,7 @@ import org.scalatest.WordSpec
 import org.scalatest.matchers.ShouldMatchers
 import java.net.URL
 
-class MechanaizeTest extends WordSpec with ShouldMatchers {
+class MechanizeTest extends WordSpec with ShouldMatchers {
     "GET 'http://www.google.co.jp'" when {
         val agent:Mechanize = new Mechanize() 
         val page:HtmlPage = agent.get("http://www.google.co.jp")
