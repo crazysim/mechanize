@@ -32,7 +32,7 @@ trait HtmlBase {
     }
     def source:DomNode
 
-    implicit def htmlpage2domnode(x:HtmlUnitPage):DomNode = new {
+    implicit def htmlpage2domnode(x:HtmlUnitPage) = new DomNode {
         def asXml() = x.asXml()
         def dom() = x
         def getElementById2(id:String):{ def asXml():String } = {
@@ -40,7 +40,7 @@ trait HtmlBase {
         } 
     }
 
-    implicit def htmlelement2domnode(x:HtmlUnitElement):DomNode = new {
+    implicit def htmlelement2domnode(x:HtmlUnitElement) = new DomNode {
         def asXml() = x.asXml
         def dom() = x
         def getElementById2(id:String):HtmlUnitElement = {
