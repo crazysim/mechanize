@@ -53,9 +53,9 @@ trait HtmlBase {
     def get(attr:FieldAttribute):Elem = {
         val element = (attr match {
             case Id(value) => source.getElementById2(value)
-            case Name(value) => findByXpath(".//*[@name='" + value + "']", source.dom).first
-            case Class(value) => findByXpath(".//*[@class='" + value + "']", source.dom).first
-            case XPath(xpath) => findByXpath(xpath, source.dom).first
+            case Name(value) => findByXpath(".//*[@name='" + value + "']", source.dom).head
+            case Class(value) => findByXpath(".//*[@class='" + value + "']", source.dom).head
+            case XPath(xpath) => findByXpath(xpath, source.dom).head
         })
         if (element != null) {
           val node = ((toNode(element.asXml) \ "html" \ "body")(0)).child(0)
