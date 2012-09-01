@@ -12,7 +12,7 @@ publishTo := Some(Resolver.file("local-github-repos", file("../maven-repos")))
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "1.6.1" % "test"
 
-libraryDependencies += "net.sourceforge.htmlunit" % "htmlunit" % "2.9"
+libraryDependencies += "net.sourceforge.htmlunit" % "htmlunit" % "2.10"
 
 libraryDependencies += "nu.validator.htmlparser" % "htmlparser" % "1.2.1"
 
